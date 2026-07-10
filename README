@@ -1,5 +1,10 @@
 # Black Hole Trajectories
 
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=python&logoColor=white)
+
 A computational physics project that simulates the motion of test particles and
 photons around a non-rotating (Schwarzschild) black hole. It integrates the
 geodesic equations of motion in general relativity and validates the results
@@ -38,7 +43,7 @@ trajectory crosses the event horizon at `r = R_s`. Full derivations are in
 ## Repository layout
 
 | File | Purpose |
-|------|---------|
+| :--- | :--- |
 | `Main.py` | Interactive entry point. Reads orbits from `parameters.txt`, runs the integration, and prompts for which plots/validations to generate. |
 | `Geodesics.py` | Core physics: the Schwarzschild metric, conserved quantities, the geodesic equations of motion (`eq_of_motion`), initial-condition builders (circular / elliptical / custom), and the `integrator` wrapper around `solve_ivp`. |
 | `Raytracer.py` | Photon geodesics for black-hole shadow / lensing work. Fires a null geodesic from a camera at a given impact parameter and reports whether it is captured. |
@@ -60,7 +65,7 @@ name, M, r_0, v_r, v_phi, method, max_tau, n_eval, orbit_type, r_peri, eccentric
 ```
 
 | Column | Meaning |
-|--------|---------|
+| :--- | :--- |
 | `name` | Human-readable label for the orbit. |
 | `M` | Black-hole mass (sets `R_s = 2M`). |
 | `r_0` | Starting radius, in units of `R_s`. |
